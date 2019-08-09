@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="main.css">
+    <link href='https://fonts.googleapis.com/css?family=Darker Grotesque' rel='stylesheet'>
+
+    <title>Chat App</title>
+</head>
+
+<body>
+
+    <form id="login">
+        <p id="prompt">Type in a user-name and start chatting.</p>
+        <input type="text" placeholder="Username" id="user_name">
+        <button id="enter">Login</button>
+    </form>
+
+
+    <!-- This dive holds like, everything -->
+    <div id="content">
+        <h1>Anonymous Chatroom</h1>
+
+        <div id="chatbox"></div>
+
+        <br>
+        <br>
+        <form>
+            <input type="text" id="user_chat" placeholder="Ask a question!">
+            <button id="submit">Submit chat</button>
+        </form>
+    </div>
+
+    <!-- Below is all our Firebase Stuff -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyCONKyYkNU7jjWxzstZaVqezBMerb69SGQ",
+            authDomain: "fir-chatroom-9ee3e.firebaseapp.com",
+            databaseURL: "https://fir-chatroom-9ee3e.firebaseio.com",
+            projectId: "fir-chatroom-9ee3e",
+            storageBucket: "",
+            messagingSenderId: "402185738665",
+            appId: "1:402185738665:web:bd7a7851eab5983c"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+
+
+
+        //get ref for the content div
+        let contentDiv = document.getElementById("content");
+        //get refs for our login form
+        let loginButton = document.getElementById("enter");
+        let loginForm = document.getElementById("login");
+        // These two variables below were written by Abhishek
+        let unameValue = document.getElementById("user_name");
+        let user_name;
+        //make it so when we click it hides the login form and shows the chatroom stuff
+        loginButton.onclick = function(event) {
+            user_name = unameValue.value;
+            event.preventDefault();
+            if (contentDiv.style.display == "none" || contentDiv.style.display == "") {
+                //show the chatroom stuff
+                contentDiv.style.display = "block";
+                //hide the login stuff
+                loginButton.style.display = "none";
+                loginForm.style.display = "none";
+            }
+        }
+
+
+
+
+        //init a connection to the database
+        let db = firebase.firestore();
+
+        //get HTML references
+        let userInputTextbox = document.getElementById("user_chat");
+        let submitButton = document.getElementById("submit");
+        let chatroomDiv = document.getElementById("chatbox");
+
+        //setup onclick for "submit" button
+        submitButton.onclick = function(event) {
+            event.preventDefault();
+
+            //get the UNIX timestamp
+            let now = new Date();
+            let timestamp = new Date().getTime();
+            console.log("Now: " + now);
+            console.log("Timestamp: " + timestamp); //This prints the amt of time in milliseconds since the first UNIX Timestamp. One of my timestamps was: " 1565187821683" and that translates to around 49 years, which is the amount of time since 1/1/1970, the date of the first UNIX Timestamp
+            // chatroomDiv.scrollHeight = ;
+
+            //extract the month, day, year. And hours, minutes, seconds
+            let hours = now.getHours();
+            let minutes = now.getMinutes();
+            let seconds = now.getSeconds();
+            let month = now.getMonth();
+            month += 1 //because for some reason the month was 7 when this was made in August
+            let date = now.getDate();
+            let year = now.getFullYear();
+
+            console.log(hours, minutes, seconds);
+            //save some data to db
+            db.collection("chatbox").add({
+                //DO NOT ADD A SEMICOLON AFTER THIS LINE
+                "chat": userInputTextbox.value,
+                "username": user_name,
+                //Right now it's linking to our database. So anything we type in the chat will be stored in the database
+                "timestamp": timestamp,
+                "hours": hours,
+                "minutes": minutes,
+                "seconds": seconds,
+                "month": month,
+                "date": date,
+                "year": year
+
+            })
+
+            //this aprt isn't necessary, but it prints to the console just to let us know that stuff is working right
+            .then(function(ref) {
+                console.log("data stored successfully in database. Ref #:" + ref.id)
+            });
+
+            //clear userInputTexbox after we submit something
+            userInputTextbox.value = "";
+
+            //as the database updates, retrieve the data
+
+        }
+        db.collection("chatbox").orderBy("timestamp").onSnapshot(function(snapshot) {
+            //clear the innerHTML of chatroomDiv so we don't see ALL the old data
+            chatroomDiv.innerHTML = "";
+
+            //iterate thru database and add data to chatroomDiv
+            for (let i = 0; i < snapshot.docs.length; i++) {
+                let snshot = snapshot.docs[i].data();
+                //right now, everytime we type a new message, it will print ALL the old data too, so we need to change that (see the line above the for loop);
+                chatroomDiv.innerHTML += "<hr>";
+                chatroomDiv.innerHTML += snshot.month + "/" + snshot.date + "/" + snshot.year + "," + " "
+                chatroomDiv.innerHTML += snshot.hours + ":" + snshot.minutes + ":" + snshot.seconds + "," + " "
+                chatroomDiv.innerHTML += snshot.username + ":" + " ";
+                chatroomDiv.innerHTML += snshot.chat + "<br>";
+                chatroomDiv.innerHTML += "<hr>";
+            }
+        })
+    </script>
+
+</body>
+
+</html>

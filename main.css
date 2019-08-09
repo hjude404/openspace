@@ -1,0 +1,11 @@
+#logo {
+    display: flex;
+    justify-content: center;
+}
+
+#nav {
+    display: flex;
+    justify-content: space-evenly;
+    flex-flow: row;
+    font-family: 'Play';
+}
