@@ -39,3 +39,10 @@ a {
     text-decoration: none;
     /* This removes underlines from any of our linkss */
 }
+
+
+/* This styles our horizontal line */
+
+hr {
+    width: 75%;
+}
