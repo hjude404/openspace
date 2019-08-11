@@ -63,3 +63,48 @@ hr {
 input::placeholder {
     font-family: 'Play';
 }
+
+
+/* This puts our profile columns next to each other */
+
+#column {
+    float: left;
+    width: 33.3%;
+    margin-bottom: 16px;
+    /* padding: 8px; */
+    display: flex;
+    justify-content: space-evenly;
+    font-family: 'Play';
+}
+
+
+/* Create a shadow effect */
+
+#card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+}
+
+
+/* Clear floats
+
+#container::after,
+#row::after {
+    content: "";
+    clear: both;
+    display: table;
+} */
+
+
+/* Style our positions */
+
+#title {
+    color: grey;
+}
+
+#meetTeam {
+    display: flex;
+    justify-content: center;
+    font-family: 'Play';
+    font-size: 30px;
+}
