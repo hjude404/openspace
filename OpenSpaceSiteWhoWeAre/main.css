@@ -108,3 +108,13 @@ input::placeholder {
     font-family: 'Play';
     font-size: 30px;
 }
+
+
+/* Stacks the blocks on top of each other when screen size changes */
+
+@media screen and (max-width: 650px) {
+    #column {
+        width: 100%;
+        display: block;
+    }
+}

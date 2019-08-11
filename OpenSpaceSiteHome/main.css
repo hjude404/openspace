@@ -62,3 +62,13 @@ hr {
 input::placeholder {
     font-family: 'Play';
 }
+
+
+/* Change looks for screen size change */
+
+@media screen and (max-width: 650px) {
+    body {
+        width: 100%;
+        font-size: 18px;
+    }
+}
