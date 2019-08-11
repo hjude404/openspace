@@ -61,3 +61,22 @@ hr {
 input::placeholder {
     font-family: 'Play';
 }
+
+
+/* This block styles the intro text on our "contact" page */
+
+#contactIntro {
+    /* display: flex; */
+    justify-content: center;
+    font-family: 'Play';
+}
+
+
+/* This block styles the lines with contact information */
+
+#contactInfo {
+    /* display: flex; */
+    /* flex-flow: column; */
+    font-family: 'Play';
+    /* justify-content: center; */
+}
