@@ -7,7 +7,7 @@
     height: 400px;
     font-family: 'Darker Grotesque';
     font-size: 22px;
-    overflow: scroll;
+    overflow-y: auto;
 }
 
 

@@ -22,7 +22,7 @@
 
     <!-- This dive holds like, everything -->
     <div id="content">
-        <h1>Anonymous Chatroom</h1>
+        <h1>OpenSpace Chat</h1>
 
         <div id="chatbox"></div>
 
@@ -59,13 +59,15 @@
 
         //get ref for the content div
         let contentDiv = document.getElementById("content");
-        //get refs for our login form
+        // //get refs for our login form
         let loginButton = document.getElementById("enter");
+        //necessary to hide the login form
         let loginForm = document.getElementById("login");
-        // These two variables below were written by Abhishek
+        // // These two variables below were written by Abhishek
         let unameValue = document.getElementById("user_name");
         let user_name;
-        //make it so when we click it hides the login form and shows the chatroom stuff
+        // //make it so when we click it hides the login form and shows the chatroom stuff
+        // //The "user_name = unameValue.value;" makes it so we can submit our chats
         loginButton.onclick = function(event) {
             user_name = unameValue.value;
             event.preventDefault();
