@@ -70,6 +70,8 @@ input::placeholder {
 }
 
 #missionText {
+    display: flex;
+    justify-content: center;
     font-family: 'Play';
     font-size: 20px;
 }
