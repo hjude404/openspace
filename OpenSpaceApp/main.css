@@ -76,7 +76,7 @@ input::placeholder {
     width: 50%;
     min-height: 400px;
     height: 400px;
-    font-family: 'Darker Grotesque';
+    font-family: 'Play';
     font-size: 22px;
     overflow-y: auto;
 }
@@ -86,9 +86,10 @@ input::placeholder {
 
 #user_chat {
     width: 500px;
-    min-width: 500px;
+    height: 40px;
+    max-width: 500px;
     word-wrap: break-word;
-    font-family: 'Darker Grotesque';
+    font-family: 'Play';
     font-size: 22px;
 }
 
@@ -98,7 +99,7 @@ input::placeholder {
 #user_name {
     /* display: flex; */
     /* justify-content: center; */
-    font-family: 'Darker Grotesque';
+    font-family: 'Play';
     font-size: 20px;
 }
 
@@ -107,7 +108,7 @@ input::placeholder {
 
 #content {
     display: none;
-    font-family: 'Darker Grotesque';
+    font-family: 'Play';
 }
 
 
@@ -117,7 +118,7 @@ input::placeholder {
     /* display: flex; */
     /* justify-content: center; */
     flex-flow: row;
-    font-family: 'Darker Grotesque';
+    font-family: 'Play';
     font-size: 20px;
 }
 
@@ -125,11 +126,12 @@ input::placeholder {
     /* display: flex; */
     /* justify-content: center; */
     flex-flow: row;
-    font-family: 'Darker Grotesque';
+    font-family: 'Play';
     font-size: 20px;
 }
 
 #submit {
-    font-family: 'Darker Grotesque';
+    font-family: 'Play';
     font-size: 22px;
+    height: 46px;
 }
