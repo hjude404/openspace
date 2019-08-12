@@ -1,3 +1,4 @@
+<!-- DISCLAIMER: All code regarding slideshows has been studied and adapted from a w3schools tutorial @: https://www.w3schools.com/howto/howto_js_slideshow.asp  -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,10 +31,44 @@
     </form>
     <hr>
     <br>
+    <br>
+    <!-- Slideshow container -->
+    <div id="slideshowContainer">
+        <!-- Full-width imgs w/ captions-->
+        <div class="mySlides fade">
+            <img src="images/placeholder1.png" style="width:100%">
+            <div id="caption">Making students feel comfortable</div>
+        </div>
 
+        <div class="mySlides fade">
+            <img src="images/placeholder2.png" style="width:100%">
+            <div id="caption">Easing classroom stress</div>
+        </div>
 
+        <div class="mySlides fade">
+            <img src="images/placeholder3.jpg" style="width:100%">
+            <div id="caption">One chat at a time</div>
+        </div>
 
-    <script src="script.js"></script>
+        <!-- Next and prev buttons -->
+        <a id="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a id="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+
+    <!-- Slide number indication dots -->
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+    </div>
+    <br>
+    <br>
+    <div id="homeText">
+
+    </div>
+    <script src="script.js">
+    </script>
 </body>
 
-</html>1
+</html>

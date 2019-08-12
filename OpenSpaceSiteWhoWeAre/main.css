@@ -29,7 +29,7 @@
 /* Hover over links and change opacity */
 
 #navOptions:hover {
-    color: white;
+    color: rgb(47, 42, 42);
     opacity: 0.3;
 }
 
@@ -96,7 +96,24 @@ input::placeholder {
 } */
 
 
-/* Style our positions */
+/* Style the text describing OpenSpace*/
+
+#whoWhatTitle {
+    display: flex;
+    justify-content: center;
+    font-family: 'Play';
+}
+
+#whoWhatText {
+    display: flex;
+    font-size: 20px;
+    font-family: 'Play';
+    justify-content: center;
+    overflow-wrap: break-word;
+}
+
+
+/* Style the text detailing our team positions */
 
 #title {
     color: grey;
@@ -106,7 +123,7 @@ input::placeholder {
     display: flex;
     justify-content: center;
     font-family: 'Play';
-    font-size: 30px;
+    /* font-size: 30px; */
 }
 
 
