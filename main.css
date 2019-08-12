@@ -61,6 +61,20 @@ input::placeholder {
 }
 
 
+/* Style the text describing our mission */
+
+#missionTitle {
+    display: flex;
+    justify-content: center;
+    font-family: 'Play';
+}
+
+#missionText {
+    font-family: 'Play';
+    font-size: 20px;
+}
+
+
 /* <!-- DISCLAIMER: All code regarding slideshows has been studied and adapted from a w3schools tutorial @: https: //www.w3schools.com/howto/howto_js_slideshow.asp  --> */
 
 

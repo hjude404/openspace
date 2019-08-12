@@ -82,18 +82,23 @@
         let loginForm = document.getElementById("login");
         // // These two variables below were written by Abhishek
         let unameValue = document.getElementById("user_name");
+        let entCode = document.getElementById("entrance_code");
         let user_name;
         // //make it so when we click it hides the login form and shows the chatroom stuff
         // //The "user_name = unameValue.value;" makes it so we can submit our chats
         loginButton.onclick = function(event) {
             user_name = unameValue.value;
+            entrance_code = entCode.value;
             event.preventDefault();
-            if (contentDiv.style.display == "none" || contentDiv.style.display == "") {
-                //show the chatroom stuff
-                contentDiv.style.display = "block";
-                //hide the login stuff
-                loginButton.style.display = "none";
-                loginForm.style.display = "none";
+            // Set an input requirement for the entrance code
+            if (entrance_code == "TeacherCode") {
+                if (contentDiv.style.display == "none" || contentDiv.style.display == "") {
+                    //show the chatroom stuff
+                    contentDiv.style.display = "block";
+                    //hide the login stuff
+                    loginButton.style.display = "none";
+                    loginForm.style.display = "none";
+                }
             }
         }
 
