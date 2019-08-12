@@ -60,8 +60,14 @@ input::placeholder {
     font-family: 'Play';
 }
 
+#promptsTitle {
+    display: flex;
+    justify-content: center;
+    font-family: 'Play';
+}
+
 #prompts {
-    /* display: flex; */
-    /* justify-content: center; */
+    display: flex;
+    justify-content: center;
     font-family: 'Play';
 }

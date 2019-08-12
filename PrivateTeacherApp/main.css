@@ -1,3 +1,66 @@
+body {
+    background-color: white;
+}
+
+
+/* This deals with and styles the whole div that contains our logo */
+
+#logo {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* This styles our image */
+
+#image {
+    width: 200px;
+    height: 200px;
+}
+
+
+/* This style our nav bar */
+
+#nav {
+    display: flex;
+    justify-content: space-evenly;
+    flex-flow: row;
+    font-family: 'Play';
+    font-size: 20px;
+}
+
+
+/* Hover over links and change opacity */
+
+#navOptions:hover {
+    color: white;
+    opacity: 0.3;
+}
+
+
+/* The block below styles our page links */
+
+a {
+    color: black;
+    text-decoration: none;
+    /* This removes underlines from any of our linkss */
+}
+
+
+/* This styles our horizontal line */
+
+hr {
+    width: 75%;
+}
+
+
+/* Style the placeholder text in our search bar */
+
+input::placeholder {
+    font-family: 'Play';
+}
+
+
 /* Text inside our chatbox */
 
 #chatbox {
@@ -27,7 +90,12 @@
 #user_name {
     /* display: flex; */
     /* justify-content: center; */
-    font-family: 'Darker Grotesque';
+    font-family: 'Play';
+    font-size: 20px;
+}
+
+#entrance_code {
+    font-family: 'Play';
     font-size: 20px;
 }
 

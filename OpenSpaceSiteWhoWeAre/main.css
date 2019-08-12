@@ -118,6 +118,17 @@ input::placeholder {
     /* font-size: 30px; */
 }
 
+#missionTitle {
+    display: flex;
+    justify-content: center;
+    font-family: 'Play';
+}
+
+#missionText {
+    font-family: 'Play';
+    font-size: 20px;
+}
+
 
 /* Stacks the blocks on top of each other when screen size changes */
 
