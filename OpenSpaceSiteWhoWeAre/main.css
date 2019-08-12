@@ -50,14 +50,6 @@ hr {
 }
 
 
-/* This styles our search form */
-
-#form {
-    display: flex;
-    justify-content: center;
-}
-
-
 /* Style the placeholder text in our search bar */
 
 input::placeholder {
