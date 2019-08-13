@@ -71,13 +71,6 @@ input::placeholder {
     color: grey;
 }
 
-#meetTeam {
-    display: flex;
-    justify-content: center;
-    font-family: 'Play';
-    /* font-size: 30px; */
-}
-
 
 /* This puts our profile columns next to each other */
 
