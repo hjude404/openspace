@@ -68,7 +68,7 @@ input::placeholder {
 /* Style the text detailing our team positions */
 
 #title {
-    color: rgb(186, 186, 186);
+    color: grey;
 }
 
 
@@ -95,8 +95,8 @@ input::placeholder {
 #card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     padding: 16px;
-    background-color: #005F84;
-    color: white;
+    /* background-color: #005F84; */
+    color: black;
 }
 
 
