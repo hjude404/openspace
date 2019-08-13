@@ -69,5 +69,9 @@ input::placeholder {
 #prompts {
     display: flex;
     justify-content: center;
+    /* background-color: black; */
+    /* color: black; */
+    text-decoration: underline;
     font-family: 'Play';
+    font-size: 22px;
 }
