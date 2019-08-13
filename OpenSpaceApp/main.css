@@ -66,6 +66,7 @@ hr {
 
 input::placeholder {
     font-family: 'Play';
+    color: #005F84
 }
 
 #chatTitle {
@@ -79,27 +80,32 @@ input::placeholder {
 #chatbox {
     /* display: flex; */
     /* justify-content: center; */
-    border: 3px solid black;
+    margin: auto;
+    border: 3px solid white;
     width: 50%;
     min-height: 400px;
     height: 400px;
     font-family: 'Play';
     font-size: 22px;
     overflow-y: auto;
+    color: white;
+    background-color: #005F84;
 }
 
 
 /* User's "user_chat" input */
 
 #user_chat {
-    /* display: flex; */
-    /* justify-content: center; */
+    display: flex;
+    justify-content: center;
+    margin: auto;
     width: 500px;
     height: 40px;
     max-width: 500px;
     word-wrap: break-word;
     font-family: 'Play';
     font-size: 22px;
+    color: #005F84;
 }
 
 
@@ -130,7 +136,7 @@ input::placeholder {
 #prompt {
     /* display: flex; */
     /* justify-content: center; */
-    /* flex-flow: row; */
+    flex-flow: row;
     font-family: 'Play';
     font-size: 20px;
 }
@@ -139,23 +145,24 @@ input::placeholder {
     /* display: flex; */
     /* justify-content: center; */
     /* flex-flow: row; */
-    color: white;
-    height: 28.5px;
+    color: #005F84;
+    height: 29px;
     font-family: 'Play';
     font-size: 20px;
-    background-color: #005F84;
+    background-color: white;
     border: none;
     cursor: pointer;
 }
 
 #submit {
-    /* display: flex; */
-    /* justify-content: center; */
-    color: white;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    color: #005F84;
     font-family: 'Play';
     font-size: 22px;
     height: 46px;
-    background-color: #005F84;
+    background-color: white;
     border: none;
     cursor: pointer;
 }
@@ -163,8 +170,22 @@ input::placeholder {
 
 }
 #login {
-    /* display: flex; */
-    /* justify-content: center; */
+    display: flex;
+    text-align: center;
     /* margin: auto; */
     /* background-color: blue; */
+}
+#question {
+    display: flex;
+    justify-content: center;
+    font-family: 'Play';
+}
+#uname {
+    display: flex;
+    justify-content: center;
+    /* margin: auto; */
+    /* flex-flow: row; */
+    
+    font-family: 'Play';
+    font-size: 20px;
 }

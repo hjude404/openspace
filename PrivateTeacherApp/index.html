@@ -28,18 +28,23 @@
     <hr>
     <br>
     <br>
-
-    <form id="login">
-        <h1 id="prompt">Let's answer some questions!</h1>
-        <input type="text" placeholder="Username" id="user_name" value="Teacher" readonly="readonly">
-        <input type="password" placeholder="Entrance Code" id="entrance_code">
-        <button id="enter">Login</button>
-    </form>
+    <div id="login">
+        <form>
+            <div id="question">
+                <h1>Let's answer some questions!</h1>
+            </div>
+            <div id="uname">
+                <input type="text" placeholder="Username" id="uname" value="Teacher" readonly="readonly">
+                <input type="password" placeholder="Entrance Code" id="entrance_code">
+                <button id="enter">Login</button>
+            </div>
+        </form>
+    </div>
 
 
     <!-- This div holds, like, everything -->
     <div id="content">
-        <h1>OpenSpace Chat</h1>
+        <h1>OpenSpace Teacher Chat</h1>
 
         <div id="chatbox"></div>
 
@@ -81,7 +86,7 @@
         //necessary to hide the login form
         let loginForm = document.getElementById("login");
         // // These two variables below were written by Abhishek
-        let unameValue = document.getElementById("user_name");
+        let unameValue = document.getElementById("uname");
         let entCode = document.getElementById("entrance_code");
         let user_name;
         // //make it so when we click it hides the login form and shows the chatroom stuff

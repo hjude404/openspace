@@ -58,32 +58,41 @@ hr {
 
 input::placeholder {
     font-family: 'Play';
+    color: #005F84;
 }
 
 
 /* Text inside our chatbox */
 
 #chatbox {
-    border: 3px solid black;
+    border: 3px solid white;
     width: 50%;
-    /* min-height: 400px; */
+    margin: auto;
+    border: 3px solid white;
+    width: 50%;
+    min-height: 400px;
     height: 400px;
     font-family: 'Play';
     font-size: 22px;
-    overflow: auto;
-    /* overflow-y: visible; */
+    overflow-y: auto;
+    color: white;
+    background-color: #005F84;
 }
 
 
 /* User's "user_chat" input */
 
 #user_chat {
+    display: flex;
+    justify-content: center;
+    margin: auto;
     width: 500px;
-    max-width: 500px;
     height: 40px;
+    max-width: 500px;
     word-wrap: break-word;
     font-family: 'Play';
     font-size: 22px;
+    color: #005F84;
 }
 
 
@@ -124,21 +133,24 @@ input::placeholder {
     /* display: flex; */
     /* justify-content: center; */
     /* flex-flow: row; */
-    color: white;
-    height: 28.5px;
+    color: #005F84;
+    height: 29px;
     font-family: 'Play';
     font-size: 20px;
-    background-color: #005F84;
+    background-color: white;
     border: none;
     cursor: pointer;
 }
 
 #submit {
-    color: white;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    color: #005F84;
     font-family: 'Play';
     font-size: 22px;
     height: 46px;
-    background-color: #005F84;
+    background-color: white;
     border: none;
     cursor: pointer;
 }
