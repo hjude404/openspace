@@ -170,8 +170,8 @@
                 let snshot = snapshot.docs[i].data();
                 //right now, everytime we type a new message, it will print ALL the old data too, so we need to change that (see the line above the for loop);
                 chatroomDiv.innerHTML += "<hr>";
-                chatroomDiv.innerHTML += snshot.month + "/" + snshot.date + "/" + snshot.year + "," + " "
-                chatroomDiv.innerHTML += snshot.hours + ":" + snshot.minutes + ":" + snshot.seconds + "," + " "
+                chatroomDiv.innerHTML += snshot.month + "/" + snshot.date + "/" + snshot.year + " " + "||" + " ";
+                chatroomDiv.innerHTML += snshot.hours + ":" + snshot.minutes + ":" + snshot.seconds + " " + "||" + " ";
                 chatroomDiv.innerHTML += snshot.username + ":" + " ";
                 chatroomDiv.innerHTML += snshot.chat + "<br>";
                 chatroomDiv.innerHTML += "<hr>";

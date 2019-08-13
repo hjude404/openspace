@@ -68,10 +68,17 @@ input::placeholder {
     font-family: 'Play';
 }
 
+#chatTitle {
+    display: flex;
+    justify-content: center;
+}
+
 
 /* Text inside our chatbox */
 
 #chatbox {
+    /* display: flex; */
+    /* justify-content: center; */
     border: 3px solid black;
     width: 50%;
     min-height: 400px;
@@ -85,6 +92,8 @@ input::placeholder {
 /* User's "user_chat" input */
 
 #user_chat {
+    /* display: flex; */
+    /* justify-content: center; */
     width: 500px;
     height: 40px;
     max-width: 500px;
@@ -99,6 +108,8 @@ input::placeholder {
 #user_name {
     /* display: flex; */
     /* justify-content: center; */
+    /* flex-direction: row; */
+    /* margin: auto; */
     font-family: 'Play';
     font-size: 20px;
 }
@@ -109,6 +120,8 @@ input::placeholder {
 #content {
     display: none;
     font-family: 'Play';
+    /* display: flex; */
+    /* justify-content: center; */
 }
 
 
@@ -117,7 +130,7 @@ input::placeholder {
 #prompt {
     /* display: flex; */
     /* justify-content: center; */
-    flex-flow: row;
+    /* flex-flow: row; */
     font-family: 'Play';
     font-size: 20px;
 }
@@ -125,13 +138,21 @@ input::placeholder {
 #enter {
     /* display: flex; */
     /* justify-content: center; */
-    flex-flow: row;
+    /* flex-flow: row; */
     font-family: 'Play';
     font-size: 20px;
 }
 
 #submit {
+    /* display: flex; */
+    /* justify-content: center; */
     font-family: 'Play';
     font-size: 22px;
     height: 46px;
+}
+
+#login {
+    /* display: flex; */
+    /* justify-content: center; */
+    /* margin: auto; */
 }

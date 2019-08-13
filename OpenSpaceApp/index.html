@@ -29,7 +29,7 @@
     <br>
     <br>
     <form id="login">
-        <h1 id="prompt">Let's ask some questions!.</h1>
+        <h1 id="prompt">Let's ask some questions!</h1>
         <input type="text" placeholder="Username" id="user_name" value="Anonymous Student" readonly="readonly">
         <button id="enter">Login</button>
     </form>
@@ -37,7 +37,7 @@
 
     <!-- This dive holds like, everything -->
     <div id="content">
-        <h1>OpenSpace Chat</h1>
+        <h1 id="chatTitle">OpenSpace Chat</h1>
 
         <div id="chatbox"></div>
 
@@ -163,8 +163,8 @@
                 let snshot = snapshot.docs[i].data();
                 //right now, everytime we type a new message, it will print ALL the old data too, so we need to change that (see the line above the for loop);
                 chatroomDiv.innerHTML += "<hr>";
-                chatroomDiv.innerHTML += snshot.month + "/" + snshot.date + "/" + snshot.year + "," + " "
-                chatroomDiv.innerHTML += snshot.hours + ":" + snshot.minutes + ":" + snshot.seconds + "," + " "
+                chatroomDiv.innerHTML += snshot.month + "/" + snshot.date + "/" + snshot.year + " " + "||" + " ";
+                chatroomDiv.innerHTML += snshot.hours + ":" + snshot.minutes + ":" + snshot.seconds + " " + "||" + " ";
                 chatroomDiv.innerHTML += snshot.username + ":" + " ";
                 chatroomDiv.innerHTML += snshot.chat + "<br>";
                 chatroomDiv.innerHTML += "<hr>";
