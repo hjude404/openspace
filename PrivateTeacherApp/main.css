@@ -62,13 +62,21 @@ input::placeholder {
 }
 
 
+/* Styles the chat title */
+
+#chatTitle {
+    display: flex;
+    justify-content: center;
+}
+
+
 /* Text inside our chatbox */
 
 #chatbox {
     border: 3px solid white;
     width: 50%;
     margin: auto;
-    border: 3px solid white;
+    /* border: 3px solid white; */
     width: 50%;
     min-height: 400px;
     height: 400px;
@@ -153,4 +161,24 @@ input::placeholder {
     background-color: white;
     border: none;
     cursor: pointer;
+}
+
+#question {
+    display: flex;
+    justify-content: center;
+    font-family: 'Play';
+}
+
+#username {
+    display: flex;
+    justify-content: center;
+}
+
+#uname {
+    display: flex;
+    justify-content: center;
+    /* margin: auto; */
+    /* flex-flow: row; */
+    font-family: 'Play';
+    font-size: 20px;
 }
