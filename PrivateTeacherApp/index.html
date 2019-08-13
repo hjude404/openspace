@@ -112,7 +112,7 @@
         let userInputTextbox = document.getElementById("user_chat");
         let submitButton = document.getElementById("submit");
         let chatroomDiv = document.getElementById("chatbox");
-
+        chatroomDiv.scrollTop = chatroomDiv.scrollHeight;
         //setup onclick for "submit" button
         submitButton.onclick = function(event) {
             event.preventDefault();
@@ -162,6 +162,9 @@
 
         }
         db.collection("chatbox").orderBy("timestamp").onSnapshot(function(snapshot) {
+            let chatroomDiv = document.getElementById("chatbox");
+            //This autoscrolls to the latest messages
+            chatroomDiv.scrollTop = chatroomDiv.scrollHeight;
             //clear the innerHTML of chatroomDiv so we don't see ALL the old data
             chatroomDiv.innerHTML = "";
 
@@ -176,6 +179,7 @@
                 chatroomDiv.innerHTML += snshot.chat + "<br>";
                 chatroomDiv.innerHTML += "<hr>";
             }
+
         })
     </script>
 

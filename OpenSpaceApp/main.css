@@ -139,6 +139,7 @@ input::placeholder {
     /* display: flex; */
     /* justify-content: center; */
     /* flex-flow: row; */
+    color: white;
     height: 28.5px;
     font-family: 'Play';
     font-size: 20px;
@@ -150,11 +151,17 @@ input::placeholder {
 #submit {
     /* display: flex; */
     /* justify-content: center; */
+    color: white;
     font-family: 'Play';
     font-size: 22px;
     height: 46px;
+    background-color: #005F84;
+    border: none;
+    cursor: pointer;
 }
 
+
+}
 #login {
     /* display: flex; */
     /* justify-content: center; */

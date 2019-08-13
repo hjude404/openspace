@@ -66,11 +66,12 @@ input::placeholder {
 #chatbox {
     border: 3px solid black;
     width: 50%;
-    min-height: 400px;
+    /* min-height: 400px; */
     height: 400px;
     font-family: 'Play';
     font-size: 22px;
-    overflow-y: auto;
+    overflow: auto;
+    /* overflow-y: visible; */
 }
 
 
@@ -123,6 +124,7 @@ input::placeholder {
     /* display: flex; */
     /* justify-content: center; */
     /* flex-flow: row; */
+    color: white;
     height: 28.5px;
     font-family: 'Play';
     font-size: 20px;
@@ -132,7 +134,11 @@ input::placeholder {
 }
 
 #submit {
+    color: white;
     font-family: 'Play';
     font-size: 22px;
     height: 46px;
+    background-color: #005F84;
+    border: none;
+    cursor: pointer;
 }
