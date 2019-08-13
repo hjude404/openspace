@@ -65,12 +65,50 @@ input::placeholder {
 }
 
 
-/* This block styles the lines with contact information */
+/* Style the text detailing our team positions */
 
-#contactInfo {
-    /* display: flex; */
-    /* flex-flow: column; */
+#title {
+    color: grey;
+}
+
+#meetTeam {
+    display: flex;
+    justify-content: center;
     font-family: 'Play';
-    font-size: 20px;
-    /* justify-content: center; */
+    /* font-size: 30px; */
+}
+
+
+/* This puts our profile columns next to each other */
+
+#column {
+    float: left;
+    width: 33.3%;
+    margin-bottom: 16px;
+    /* padding: 8px; */
+    display: flex;
+    justify-content: space-evenly;
+    font-family: 'Play';
+}
+
+#linkedin {
+    text-decoration: underline;
+}
+
+
+/* Create a shadow effect */
+
+#card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+}
+
+
+/* Stacks the blocks on top of each other when screen size changes */
+
+@media screen and (max-width: 650px) {
+    #column {
+        width: 100%;
+        display: block;
+    }
 }
