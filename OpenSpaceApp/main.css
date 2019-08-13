@@ -139,8 +139,12 @@ input::placeholder {
     /* display: flex; */
     /* justify-content: center; */
     /* flex-flow: row; */
+    height: 28.5px;
     font-family: 'Play';
     font-size: 20px;
+    background-color: #005F84;
+    border: none;
+    cursor: pointer;
 }
 
 #submit {
@@ -155,4 +159,5 @@ input::placeholder {
     /* display: flex; */
     /* justify-content: center; */
     /* margin: auto; */
+    /* background-color: blue; */
 }
