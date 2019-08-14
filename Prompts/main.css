@@ -75,3 +75,8 @@ input::placeholder {
     font-family: 'Play';
     font-size: 22px;
 }
+
+#prompts:hover {
+    color: white;
+    opacity: 0.3;
+}
