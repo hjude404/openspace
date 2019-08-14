@@ -109,6 +109,8 @@ input::placeholder {
     font-size: 20px;
     font-family: 'Play';
     overflow-wrap: break-word;
+    width: 600px;
+    margin: auto;
 }
 
 

@@ -1,3 +1,4 @@
+<!-- DISCLAIMER: All code regarding slideshows has been studied and adapted from a w3schools tutorial @: https://www.w3schools.com/howto/howto_js_slideshow.asp  -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,11 +13,11 @@
 </head>
 
 <body>
+
     <div id="logo">
-        <a href="../OpenSpaceSiteHome/index.html"><img id="image" src="images/openSpaceLogo.png" width=300 height=160></a>
+        <a href="OpenSpaceSiteHome/index.html"><img id="image" src="images/openSpaceLogo.png" width=300 height=160></a>
     </div>
     <!-- This is our navigation bar -->
-
     <div id="nav">
         <div id="navOptions"><a href="../OpenSpaceSiteHome/index.html">Home</a></div>
         <div id="navOptions"><a href="../OpenSpaceSiteWhoWeAre/index.html">Who We Are</a></div>
@@ -53,25 +54,30 @@
 
     <!-- Slide number indication dots -->
     <div style="text-align:center">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
     </div>
     <br>
     <br>
-    <div id="homeText">
 
-    </div>
     <div id="missionTitle">
         <h1>Our Mission</h1>
     </div>
     <div id="missionText">
-        <p>OpenSpace envisions a classroom where students are able to safely ask questions without insecurity.</p>
+        <p>OpenSpace envisions classrooms where students are able to safely ask questions without insecurity.</p>
     </div>
     <br>
-
-
-    <script src="script.js"></script>
+    <hr>
+    <div id="whoUseTitle">
+        <h1>Who is OpenSpace For?</h1>
+    </div>
+    <div id="whoUseText">
+        <p>OpenSpace is chiefly aimed at high-school and university students. High-school students more often have to deal with personal insecurities and huge college lecture halls often make the prospect of asking questions seem daunting, with so many people
+            there; OpenSpace provides, well, an <i>open space</i> for students to ask their questions without insecurities of being judged or ridiculed by their peers.</p>
+    </div>
+    <script src="script.js">
+    </script>
 </body>
 
 </html>

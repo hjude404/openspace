@@ -1,3 +1,8 @@
+body {
+    background-color: white;
+}
+
+
 /* This deals with and styles the whole div that contains our logo */
 
 #logo {
@@ -56,22 +61,14 @@ input::placeholder {
 }
 
 
-/* Change looks for screen size change */
-
-@media screen and (max-width: 650px) {
-    body {
-        width: 100%;
-        font-size: 18px;
-    }
-}
-
-
 /* Style the text describing our mission */
 
 #missionTitle {
     display: flex;
     justify-content: center;
     font-family: 'Play';
+    width: 400px;
+    margin: auto;
 }
 
 #missionText {
@@ -79,6 +76,28 @@ input::placeholder {
     justify-content: center;
     font-family: 'Play';
     font-size: 20px;
+    width: 700px;
+    margin: auto;
+}
+
+
+/* Style the text describing who OpenSpace is for (who our market is) */
+
+#whoUseTitle {
+    display: flex;
+    justify-content: center;
+    font-family: 'Play';
+    width: 400px;
+    margin: auto;
+}
+
+#whoUseText {
+    display: flex;
+    justify-content: center;
+    font-family: 'Play';
+    font-size: 20px;
+    width: 700px;
+    margin: auto;
 }
 
 
@@ -115,7 +134,7 @@ input::placeholder {
     width: auto;
     margin-top: -22px;
     padding: 10px;
-    color: blue;
+    color: #005F84;
     font-weight: bold;
     font-size: 18px;
     transition: 0.6s ease;
@@ -197,5 +216,14 @@ input::placeholder {
     }
     to {
         opacity: 1
+    }
+}
+
+
+/* On smaller screens, decrease text size */
+
+@media only screen and (max-width: 300px) {
+    #caption {
+        font-size: 11px
     }
 }
