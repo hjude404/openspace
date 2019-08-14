@@ -67,6 +67,8 @@ input::placeholder {
     display: flex;
     justify-content: center;
     font-family: 'Play';
+    width: 400px;
+    margin: auto;
 }
 
 #missionText {
@@ -74,6 +76,28 @@ input::placeholder {
     justify-content: center;
     font-family: 'Play';
     font-size: 20px;
+    width: 700px;
+    margin: auto;
+}
+
+
+/* Style the text describing who OpenSpace is for (who our market is) */
+
+#whoUseTitle {
+    display: flex;
+    justify-content: center;
+    font-family: 'Play';
+    width: 400px;
+    margin: auto;
+}
+
+#whoUseText {
+    display: flex;
+    justify-content: center;
+    font-family: 'Play';
+    font-size: 20px;
+    width: 700px;
+    margin: auto;
 }
 
 
@@ -192,5 +216,14 @@ input::placeholder {
     }
     to {
         opacity: 1
+    }
+}
+
+
+/* On smaller screens, decrease text size */
+
+@media only screen and (max-width: 300px) {
+    #caption {
+        font-size: 11px
     }
 }

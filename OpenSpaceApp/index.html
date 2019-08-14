@@ -87,6 +87,7 @@
         // // These two variables below were written by Abhishek
         let unameValue = document.getElementById("uname");
         let user_name;
+        let loginTime = new Date().getTime();
         // //make it so when we click it hides the login form and shows the chatroom stuff
         // //The "user_name = unameValue.value;" makes it so we can submit our chats
         loginButton.onclick = function(event) {
@@ -171,12 +172,15 @@
             for (let i = 0; i < snapshot.docs.length; i++) {
                 let snshot = snapshot.docs[i].data();
                 //right now, everytime we type a new message, it will print ALL the old data too, so we need to change that (see the line above the for loop);
-                chatroomDiv.innerHTML += "<hr>";
-                chatroomDiv.innerHTML += snshot.month + "/" + snshot.date + "/" + snshot.year + " " + "||" + " ";
-                chatroomDiv.innerHTML += snshot.hours + ":" + snshot.minutes + ":" + snshot.seconds + " " + "||" + " ";
-                chatroomDiv.innerHTML += snshot.username + ":" + " ";
-                chatroomDiv.innerHTML += snshot.chat + "<br>";
-                chatroomDiv.innerHTML += "<hr>";
+                if (snshot.timestamp > loginTime) {
+                    chatroomDiv.innerHTML += "<hr>";
+                    chatroomDiv.innerHTML += snshot.month + "/" + snshot.date + "/" + snshot.year + " " + "||" + " ";
+                    chatroomDiv.innerHTML += snshot.hours + ":" + snshot.minutes + ":" + snshot.seconds + " " + "||" + " ";
+                    chatroomDiv.innerHTML += snshot.username + ":" + " ";
+                    chatroomDiv.innerHTML += snshot.chat + "<br>";
+                    chatroomDiv.innerHTML += "<hr>";
+                    chatroomDiv.scrollTop = chatroomDiv.scrollHeight;
+                }
             }
         })
     </script>
