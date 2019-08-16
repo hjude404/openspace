@@ -86,7 +86,9 @@ input::placeholder {
 
 #linkedin {
     text-decoration: underline;
-    color: white;
+    /* color: white; */
+    color: #0077B5;
+    font-size: 30px;
 }
 
 
